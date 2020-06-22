@@ -1,0 +1,45 @@
+header, footer {
+    background-color:#020303;
+    color: #ddd;
+    padding: 20px;
+    text-align: center;
+}
+aside{
+    padding-top: 10px;
+    font-weight: bold;
+}
+.title {
+    color: darkgrey;
+}
+#orderlist {
+    color: darkgreen;  
+}
+nav {
+    background-color: #222;
+}
+
+section, article {
+    padding: 10px;
+    background-color:white;
+}
+
+/* img {
+    height: 250px;
+    width: 250px;
+} */
+
+.form-row {
+    padding: 10px;
+    flex: 1;
+
+}
+#search {
+    width: 357px;
+    margin: 100px;
+  }
+
+
+  
+  
+
+
