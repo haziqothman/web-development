@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="witdh=device-width, initial-scale=1">
+    <title>My First Web PAge</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"> -->
+    <link rel="stylesheet" href="https://cdnjs.cloudfare.com/ajax/libs/fontawesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link href="app.css" rel="stylesheet"/>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <link href="app.css" rel="stylesheet"/>
+    <link />
+    <script src="app.js" type="application/javascript"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquerymin.js"></script>
+    <script src="https://cdnjs.cloudfare.com/ajax/libs/popper.js/1.12.9/umd/popper.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.7.7/js/bootstrap.min.js"></script>
+    <script src="https://use.fontawesome.com/releases/v5.0.8/js/all.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js" charset="utf-8"></script>
+  </head>
+
+  <body onload="onload();">
+    <header class="container-fluid">
+    <h1>Apple Store</h1>
+   </header>
+
+   <style>
+  *{
+  margin: 0;
+  padding: 0;
+  font-family: "Open Sans",sans-serif;
+  box-sizing: border-box;
+}
+
+.product-card{
+  width: 400px;
+  background: #ecedef;
+  padding: 40px;
+  position: absolute;
+  transform: translate(-50%,-50%);
+  text-transform: uppercase;
+}
+.product-card h1{
+  font-size: 22px;
+  margin-bottom: 4px;
+}
+.product-card p{
+  font-size: 13px;
+  color: #bbb;
+}
+.product-pic{
+  background-image:"images/macpro13/1.png";
+  width: 100%;
+  height: 300px;
+  background-size: cover;
+  background-position: center;
+  transition: .6s linear;
+}
+.product-colors{
+  margin-bottom: 40px;
+  display: flex;
+  justify-content: center;
+}
+
+.product-colors span{
+  width: 14px;
+  height: 14px;
+  margin: 0 10px;
+  border-radius: 50%;
+  cursor: pointer;
+  position: relative;
+}
+.space-Gray{
+  background: #bdc3c7;
+}
+.silver{
+  background: #ecf0f1;
+}
+
+.product-colors .active:after{
+  content: "";
+  width: 22px;
+  height: 22px;
+  border: 2px solid #8888;
+  position: absolute;
+  border-radius: 50%;
+  box-sizing: border-box;
+  left: -4px;
+  top: -4px;
+}
+.product-info{
+  display: flex;
+  align-items: center;
+}
+.product-price{
+  color: black;
+  font-size: 26px;
+}
+.product-button{
+  margin-left: auto;
+  color: #7ed6df;
+  text-decoration: none;
+  border: 2px solid;
+  padding: 8px 24px;
+  border-radius: 20px;
+  transition: .4s linear;
+}
+
+.product-button:hover{
+  transform: scale(1.06);
+}
+   </style>
+
+   <nav class="navbar navbar-expand-md navbar-light bg-light sticky-top">
+     <div class="container-fluid">
+      <a class="navbar-brand" href="DevOps.html"><img src="images/apple.png"witdh="30px" height="30px"></a>
+     
+       <div class="collapse navbar-collapse" id="navbarResponsive">
+     <ul class="navbar-nav ml-auto">
+      <a class="nav-link" href="index.html">Home</a></li>
+      <a  class="nav-link"  href="mac.html">Mac</a></li>
+      <a  class="nav-link"  href="contact.html">iPad</a></li>
+      <a  class="nav-link"  href="iphone.html">iPhone</a></li>
+      <a  class="nav-link"  href="contact.html">Watch</a></li>
+      <a  class="nav-link"  href="contact.html">TV</a></li>
+      <a  class="nav-link" href="about.html">About us</a></li>
+      <a  class="nav-link"  href="contact.html">Support</a></li>
+     </ul>
+     
+     <form class="form-inline">
+      <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+      <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+    </form>
+    </div>
+    </div>
+   </nav>
+
+   <nav class="navbar navbar-expand-md navbar-light bg-light sticky-top">
+    <div class="container-fluid">
+    <a class="navbar-brand" href="">iPhone</a>
+    <div class="collapse navbar-collapse" id="navbarResponsive">
+      <ul class="navbar-nav ml-auto">
+        <a class="nav-link" href="#">Overview</a></li>
+        <a  class="nav-link" href="about.html">Tech Specs</a></li>
+      </ul>
+      </div>
+    </nav>
+    <hr class="light">
+  
+    <h1 style="text-align: center; font-size: xx-large; ">Choose your new MacBook Pro.</h1>
+
+ <div class="row" style="margin-top: 50px; margin-left: 500px;">
+    <button style=" background-color: white; color: black; border: 2px solid #e7e7e7; padding: 15px;"><a class="nav-link" href="#">13-inch</a></button>
+    <button style=" background-color: white; color: black; border: 2px solid #e7e7e7; padding: 15px;"><a class="nav-link" href="#">16-inch</a></button>
+  </div>
+
+  <div class="product-card" style="margin-top: 400px; margin-left: 250px; background-color: white;">
+    
+    <div class="product-pic"></div>
+    <div class="product-colors">
+      <span class="space-Gray" data-color="#bdc3c7" data-pic="url(1.png)"></span>
+      <span class="silver" data-color="#ecf0f1" data-pic="url(2.png)"></span>
+    </div>
+    <p style= color:red;">New</p>
+    <h1>1.4GHz Quad-Core Processor with Turbo Boost up to 3.9GHz
+      256 GB Storage
+      Touch Bar and Touch ID</h1>
+    <p>1.4GHz quad-core 8th-generation Intel Core i5 processor</p>
+    <p>Intel Iris Plus Graphics 645</p>
+    <p>Turbo Boost up to 3.9GHz</p>
+    <p>8GB 2133MHz LPDDR3 memory</p>
+    <p>256GB SSD storage¹</p>
+    <p>Magic Keyboard</p>
+    <p>Touch Bar and Touch ID</p>
+    <p>Two Thunderbolt 3 ports</p>
+    
+    <div class="product-info">
+      <div class="product-price"> RM 5,599.00</div>
+      <a href="#" class="product-button">Add to Cart</a>
+    </div>
+  </div>
+
+  <div class="product-card" style="margin-top: 400px; margin-left: 80%; background-color: white;">
+    
+    <div class="product-pic"></div>
+    <div class="product-colors">
+      <span class="space-Gray" data-color="#bdc3c7" data-pic="url(1.png)"></span>
+      <span class="silver" data-color="#ecf0f1" data-pic="url(2.png)"></span>
+    </div>
+    <p style= color:red;">New</p>
+    <h1>1.4GHz Quad-Core Processor with Turbo Boost up to 3.9GHz
+      512 GB Storage
+      Touch Bar and Touch ID</h1>
+    <p>1.4GHz quad-core 8th-generation Intel Core i5 processor</p>
+    <p>Turbo Boost up to 3.9GHz</p>
+    <p>Intel Iris Plus Graphics 645</p>
+    <p>8GB 2133MHz LPDDR3 memory</p>
+    <p>512GB SSD storage¹</p>
+    <p>13-inch Retina display with True Tone</p>
+    <p>Magic Keyboard</p>
+    <p>Touch Bar and Touch ID</p>
+    <p>Two Thunderbolt 3 ports</p>
+    
+    <div class="product-info">
+      <div class="product-price">RM 6,399.00</div>
+      <a href="#" class="product-button">Add to Cart</a>
+    </div>
+  </div>
+
+  <div class="product-card" style="margin-top: 110%; margin-left: 250px; background-color: white;">
+   
+    <div class="product-pic"></div>
+    <div class="product-colors">
+      <span class="space-Gray" data-color="#bdc3c7" data-pic="url(1.png)"></span>
+      <span class="silver" data-color="#ecf0f1" data-pic="url(2.png)"></span>
+    </div>
+    <p style= color:red;">New</p>
+    <h1>2.0GHz Quad-Core Processor with Turbo Boost up to 3.8GHz
+      512 GB Storage
+      Touch Bar and Touch ID</h1>
+    <p>2.0GHz quad-core 10th-generation Intel Core i5 processor</p>
+    <p>Turbo Boost up to 3.8GHz</p>
+    <p>Intel Iris Plus Graphics</p>
+    <p>16GB 3733MHz LPDDR4X memory</p>
+    <p>512GB SSD storage¹</p>
+    <p>13-inch Retina display with True Tone</p>
+    <p>Magic Keyboard</p>
+    <p>Touch Bar and Touch ID</p>
+    <p>Two Thunderbolt 3 ports</p>
+    
+    <div class="product-info">
+      <div class="product-price">  RM 7,999.00</div>
+      <a href="#" class="product-button">Add to Cart</a>
+    </div>
+  </div>
+
+  
+<div class="product-card" style="margin-top: 110%; margin-left: 80%; background-color: white;"> 
+    <div class="product-pic"></div>
+    <div class="product-colors">
+      <span class="space-Gray" data-color="#bdc3c7" data-pic="url(1.png)"></span>
+      <span class="silver" data-color="#ecf0f1" data-pic="url(2.png)"></span>
+    </div>
+    <p style= color:red;">New</p>
+    <h1>2.0GHz Quad-Core Processor with Turbo Boost up to 3.8GHz
+      1TB Storage
+      Touch Bar and Touch ID/h1>
+    <p>2.0GHz quad-core 10th-generation Intel Core i5 processor</p>
+    <p>Turbo Boost up to 3.8GHz</p>
+    <p>Intel Iris Plus Graphics</p>
+    <p>16GB 3733MHz LPDDR4X memory</p>
+    <p>1TB SSD storage¹</p>
+    <p>13-inch Retina display with True Tone</p>
+    <p>Magic Keyboard</p>
+    <p>Touch Bar and Touch ID</p>
+    <p>Two Thunderbolt 3 ports</p>
+    
+    <div class="product-info">
+      <div class="product-price"> RM 8,799.00</div>
+      <a href="#" class="product-button">Add to Cart</a>
+    </div>
+  </div>
+
+  <script>
+    $(".product-colors span").click(function(){
+      $(".product-colors span").removeClass("active");
+      $(this).addClass("active");
+      // $("body").css("background",$(this).attr("data-color"));
+      // $(".product-price").css("color",$(this).attr("data-color"));
+      // $(".product-button").css("color",$(this).attr("data-color"));
+      $(".product-pic").css("background-image",$(this).attr("data-pic"));
+    });
+  </script>
+</body>
+</html>
