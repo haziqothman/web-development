@@ -22,12 +22,100 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.7.7/js/bootstrap.min.js"></script>
     <script src="https://use.fontawesome.com/releases/v5.0.8/js/all.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js" charset="utf-8"></script>
   </head>
 
   <body onload="onload();">
     <header class="container-fluid">
     <h1>Apple Store</h1>
    </header>
+
+   <style>
+  *{
+  margin: 0;
+  padding: 0;
+  font-family: "Open Sans",sans-serif;
+  box-sizing: border-box;
+}
+
+.product-card{
+  width: 400px;
+  background: #ecedef;
+  padding: 40px;
+  position: absolute;
+  transform: translate(-50%,-50%);
+  text-transform: uppercase;
+}
+.product-card h1{
+  font-size: 22px;
+  margin-bottom: 4px;
+}
+.product-card p{
+  font-size: 13px;
+  color: #bbb;
+}
+.product-pic{
+  background-image:"images/macpro13/1.png";
+  width: 100%;
+  height: 300px;
+  background-size: cover;
+  background-position: center;
+  transition: .6s linear;
+}
+.product-colors{
+  margin-bottom: 40px;
+  display: flex;
+  justify-content: center;
+}
+
+.product-colors span{
+  width: 14px;
+  height: 14px;
+  margin: 0 10px;
+  border-radius: 50%;
+  cursor: pointer;
+  position: relative;
+}
+.space-Gray{
+  background: #bdc3c7;
+}
+.silver{
+  background: #ecf0f1;
+}
+
+.product-colors .active:after{
+  content: "";
+  width: 22px;
+  height: 22px;
+  border: 2px solid #8888;
+  position: absolute;
+  border-radius: 50%;
+  box-sizing: border-box;
+  left: -4px;
+  top: -4px;
+}
+.product-info{
+  display: flex;
+  align-items: center;
+}
+.product-price{
+  color: black;
+  font-size: 26px;
+}
+.product-button{
+  margin-left: auto;
+  color: #7ed6df;
+  text-decoration: none;
+  border: 2px solid;
+  padding: 8px 24px;
+  border-radius: 20px;
+  transition: .4s linear;
+}
+
+.product-button:hover{
+  transform: scale(1.06);
+}
+   </style>
 
    <nav class="navbar navbar-expand-md navbar-light bg-light sticky-top">
      <div class="container-fluid">
@@ -37,13 +125,14 @@
      <ul class="navbar-nav ml-auto">
       <a class="nav-link" href="index.html">Home</a></li>
       <a  class="nav-link"  href="mac.html">Mac</a></li>
-      <a  class="nav-link"  href="contact.html">iPad</a></li>
+      <a  class="nav-link"  href="ipad.html">iPad</a></li>
       <a  class="nav-link"  href="iphone.html">iPhone</a></li>
       <a  class="nav-link"  href="contact.html">Watch</a></li>
       <a  class="nav-link"  href="contact.html">TV</a></li>
       <a  class="nav-link" href="about.html">About us</a></li>
       <a  class="nav-link"  href="contact.html">Support</a></li>
      </ul>
+     
      <form class="form-inline">
       <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
       <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
@@ -54,7 +143,7 @@
 
    <nav class="navbar navbar-expand-md navbar-light bg-light sticky-top">
     <div class="container-fluid">
-    <a class="navbar-brand" href="">iPhone</a>
+    <a class="navbar-brand" href="">MacBook Pro 16-inch</a>
     <div class="collapse navbar-collapse" id="navbarResponsive">
       <ul class="navbar-nav ml-auto">
         <a class="nav-link" href="#">Overview</a></li>
@@ -67,6 +156,75 @@
     <h1 style="text-align: center; font-size: xx-large; ">Choose your new MacBook Pro.</h1>
 
  <div class="row" style="margin-top: 50px; margin-left: 500px;">
-    <button style=" background-color: white; color: black; border: 2px solid #e7e7e7; padding: 15px;"><a class="nav-link" href="#" style="">13-inch</a></button>
-    <button style=" background-color: white; color: black; border: 2px solid #e7e7e7; padding: 15px;"><a class="nav-link" href="#">16-inch</a></button>
+    <button style=" background-color: white; color: black; border: 2px solid #e7e7e7; padding: 15px;"><a class="nav-link" href="macbookpro13inch.html">13-inch</a></button>
+    <button style=" background-color: white; color: black; border: 2px solid #e7e7e7; padding: 15px;"><a class="nav-link" href="macbookpro16inch.html">16-inch</a></button>
   </div>
+
+  <div class="product-card" style="margin-top: 400px; margin-left: 250px; background-color: white;">
+    
+    <div class="product-pic"></div>
+    <div class="product-colors">
+      <span class="space-Gray"  data-color="#bdc3c7" data-pic="url(3.png)"></span>
+      <span class="silver" data-color="#ecf0f1" data-pic="url(4.png)"></span>
+    </div>
+    <h1>2.6GHz 6-Core Processor
+      512 GB Storage
+      AMD Radeon Pro 5300M</h1>
+    <p>2.6GHz 6-core 9th-generation Intel Core i7 processor</p>
+    <p>Turbo Boost up to 4.5GHz</p>
+    <p>AMD Radeon Pro 5300M with 4GB of GDDR6 memory</p>
+    <p>16GB 2666MHz DDR4 memory</p>
+    <p>512GB SSD storage¹</p>
+    <p>16-inch Retina display with True Tone</p>
+    <p>Magic Keyboard</p>
+    <p>Touch Bar and Touch ID</p>
+    <p>Four Thunderbolt 3 ports</p>
+    
+    <div class="product-info">
+      <div class="product-price"> RM 10,499.00</div>
+      <a href="#" class="product-button">Add to Cart</a>
+    </div>
+  </div>
+  
+
+  <div class="product-card" style="margin-top: 400px; margin-left: 80%; background-color: white;">
+    
+    <div class="product-pic"></div>
+    <div class="product-colors">
+      <span class="space-Gray"  data-color="#bdc3c7" data-pic="url(3.png)"></span>
+      <span class="silver" data-color="#ecf0f1" data-pic="url(4.png)"></span>
+    </div>
+    <h1>2.3GHz 8-Core Processor
+      1TB Storage
+      AMD Radeon Pro 5500M</h1>
+    <p>2.3GHz 8-core 9th-generation Intel Core i9 processor</p>
+    <p>Turbo Boost up to 4.8GHz</p>
+    <p>AMD Radeon Pro 5500M with 4GB of GDDR6 memory</p>
+    <p>16GB 2666MHz DDR4 memory</p>
+    <p>1TB SSD storage¹</p>
+    <p>16-inch Retina display with True Tone</p>
+    <p>Magic Keyboard</p>
+    <p>Touch Bar and Touch ID</p>
+    <p>Four Thunderbolt 3 ports</p>
+    
+    <div class="product-info">
+      <div class="product-price"> 
+        RM 12,199.00</div>
+      <a href="#" class="product-button">Add to Cart</a>
+    </div>
+  </div>
+    
+
+
+  <script>
+    $(".product-colors span").click(function(){
+      $(".product-colors span").removeClass("active");
+      $(this).addClass("active");
+      // $("body").css("background",$(this).attr("data-color"));
+      // $(".product-price").css("color",$(this).attr("data-color"));
+      // $(".product-button").css("color",$(this).attr("data-color"));
+      $(".product-pic").css("background-image",$(this).attr("data-pic"));
+    });
+  </script>
+</body>
+</html>
